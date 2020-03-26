@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './styles.css';
 import logoImg from "../../assets/logo.svg";
 import { Link, useHistory } from 'react-router-dom';
@@ -26,9 +25,9 @@ export default function NewIncident() {
 		}
 	}
 
-  return (
-    <div className="new-incident-container">
-      <div className="content">
+	return (
+		<div className="new-incident-container">
+			<div className="content">
 				<section>
 					<img src={logoImg} alt="Be The Hero"/>
 					<h1>Register new Incident</h1>
