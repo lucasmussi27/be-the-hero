@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
+const { errors } = require('celebrate');
 const app = express();
 
 app.use(cors());
@@ -8,7 +9,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(routes);
+app.use(errors());
 
-app.listen(3333, () => {
-  console.log(`Listening on port 3333`);
-});
+module.exports = app
